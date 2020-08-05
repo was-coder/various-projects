@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+body .container {
+  background-color: #b3b0b0;
+  overflow: hidden;
+  -webkit-box-shadow: 5px 0 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 0 5px rgba(0, 0, 0, 0.5);
+  width: 500px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+body .container .h2 {
+  padding: 10px 30px;
+  border-bottom: 1px solid #000;
+}
+
+body .container .form {
+  padding: 30px 40px;
+}
+
+body .container .form .control {
+  margin-bottom: 10px;
+  padding-bottom: 30px;
+  position: relative;
+  font-weight: bold;
+}
+
+body .container .form .control label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+body .container .form .control input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding-left: 5px;
+  font-weight: bold;
+}
+
+body .container .form .control .check, body .container .form .control .exclame {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  visibility: hidden;
+}
+
+body .container .form .control small {
+  color: slategrey;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  font-weight: bold;
+}
+
+body .container .form .success input {
+  border-color: green;
+}
+
+body .container .form .success .check {
+  color: green;
+  visibility: visible;
+}
+
+body .container .form .success small {
+  visibility: hidden;
+}
+
+body .container .form .fail input {
+  border-color: red;
+}
+
+body .container .form .fail .exclame {
+  color: red;
+  visibility: visible;
+}
+
+body .container .form .fail small {
+  color: red;
+  visibility: visible;
+}
+
+body .container .form button {
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+/*# sourceMappingURL=index.css.map */

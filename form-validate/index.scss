@@ -1,0 +1,131 @@
+$colors : (
+    color1 : #fff,
+    color2 : green,
+    color3 : red,
+    color4 : #000
+);
+
+@function get-colors($color-value) {
+    @return map-get($colors, $color-value)
+}
+
+$sizes : (
+    size0 : 0,
+    size1 : 5px,
+    size2 : 10px,
+    size3 : 30px,
+    size4 : 40px
+);
+
+@function get-sizes($size-value) {
+    @return map-get($sizes, $size-value)
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    .container {
+        background-color: rgb(179, 176, 176);
+        overflow: hidden;
+        box-shadow: 5px 0 5px rgba(0,0,0,0.5);
+        width: 500px;
+        max-width: 100%;
+        border-radius: get-sizes(size2);
+
+        .h2 {
+            padding: get-sizes(size2) get-sizes(size3);
+            border-bottom: 1px solid #000;
+        }
+
+        .form {
+            padding: get-sizes(size3) get-sizes(size4);
+
+            .control {
+                margin-bottom: get-sizes(size2);
+                padding-bottom: get-sizes(size3);
+                position: relative;
+                font-weight: bold;
+
+                label {
+                    display: inline-block;
+                    margin-bottom: get-sizes(size1);
+                }
+
+                input {
+                    display: block;
+                    width: 100%;
+                    height: get-sizes(size4);
+                    padding-left: get-sizes(size1);
+                    font-weight: bold;
+                }
+
+                .check, .exclame {
+                    position: absolute;
+                    top: get-sizes(size4);
+                    right: get-sizes(size2);
+                    visibility: hidden;
+                }
+
+                small {
+                    color: slategrey;
+                    position: absolute;
+                    bottom: get-sizes(size2);
+                    left: get-sizes(size0);
+                    font-weight: bold;
+                }
+            }
+
+            .success input {
+                border-color : get-colors(color2);
+            }
+            
+            .success .check {
+                color: get-colors(color2);
+                visibility: visible;
+            }
+
+            .success small {
+                visibility: hidden;
+            }
+            
+            .fail input {
+                border-color : get-colors(color3);
+            }
+            
+            .fail .exclame {
+                color: get-colors(color3);
+                visibility: visible;
+            }
+
+            .fail small {
+                color: get-colors(color3);
+                visibility: visible;
+            }
+
+            button {
+                display: block;
+                width: 100%;
+                text-transform: uppercase;
+                color: get-colors(color4);
+                font-weight: bold;
+                letter-spacing: 1px;
+            }
+
+
+        }
+
+        
+    }
+}
