@@ -3,18 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/button-anim/index.css">
-    <link rel="stylesheet" href="/button-anim/bootstrap.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-    <title>Button Animation</title>
+    <link rel="stylesheet" href="/form-validate/index.css">
+    <link rel="stylesheet" href="/form-validate/bootstrap.min.css">
+    <title>Form Validation</title>
 </head>
-<body class="bg-dark">
-        <a href="#" class="text-uppercase text-light" data-aos="fade-down" data-aos-delay="500" data-aos-duration="1000" data-aos-easing="ease-in-out">
-            <svg data-aos="zoom-in" data-aos-delay="1200" data-aos-duration="1000" data-aos-easing="ease-in-out"><rect></rect></svg>
-            hover on
-        </a>
+<body>
+    
+    <div class="container">
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="/button-anim/scripts.js"></script>
+        <div class="h2 text-capitalize font-weight-bold">create account</div>
+
+        <form id="form" class="form">
+
+            <div class="control">
+                <label for="user">Username</label>
+                <input type="text" id="user" name="user" placeholder="Input Your Username">
+                <i class="fas fa-check-circle check"></i>
+                <i class="fas fa-exclamation-circle exclame"></i>
+                <small>
+                    <sup>*</sup>Enter a unique username
+                </small>
+            </div>
+            
+            <div class="control">
+                <label for="pass1">Password</label>
+                <input type="password" id="pass1" name="pass1" placeholder="Enter Your Pass Key">
+                <i class="fas fa-check-circle check"></i>
+                <i class="fas fa-exclamation-circle exclame"></i>
+                <small>
+                    <sup>*</sup>Preferably include number and capital letter
+                </small>
+            </div>
+
+            <div class="control">
+                <label for="pass2">Password Check</label>
+                <input type="password" id="pass2" name="pass2" placeholder="Confirm Your Pass Key">
+                <i class="fas fa-check-circle check"></i>
+                <i class="fas fa-exclamation-circle exclame"></i>
+                <small>
+                    <sup>*</sup>Confirm your password
+                </small>
+            </div>
+
+            <div class="control">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Input Your Email-Address">
+                <i class="fas fa-check-circle check"></i>
+                <i class="fas fa-exclamation-circle exclame"></i>
+                <small>
+                    <sup>*</sup>Enter a valid email
+                </small>
+            </div>
+
+            <button class="btn btn-outline-primary">submit</button>
+        </form>
+
+    </div>
+
+    <script src="/form-validate/index.js"></script>
+    <script src="/form-validate/bootstrap.bundle.min.js"></script>
+    <script src="/form-validate/all.js"></script>
+
 </body>
 </html>
