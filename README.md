@@ -4,7 +4,7 @@
 </div>
 
 <div>
-    <h2>PROJECT 1 : BUTTON ANIMATION<h2>
+    <h2>PROJECT 1 : BUTTON ANIMATION</h2>
     <p>This Project was inspired by online tutors youtube videos on svg and i created my own version of the button</p>
 </div>
 
